@@ -39,5 +39,19 @@ namespace bevasarlolista
                 MessageBox.Show("Nincs megadva termék","Hiba",MessageBoxButton.OK,MessageBoxImage.Error);
             }
         }
+
+        private void btn_eygtorles_Click(object sender, RoutedEventArgs e)
+        {
+            if (lbx_bevasarlolista.SelectedIndex != -1)
+            {
+                listaelemek.RemoveAt(lbx_bevasarlolista.SelectedIndex);
+                lbx_bevasarlolista.Items.Refresh();
+
+            }
+            else
+            {
+                MessageBox.Show("Nincs kiválasztva termék", "Hiba", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
     }
 }
