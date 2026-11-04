@@ -12,5 +12,19 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <ListBox x:Name="lbx_bevasarlolista" Grid.Column="0"/>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="90"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="tbx_ujtermek" Grid.Row="0"/>
+            <Button x:Name="btn_hozzaad" Content="Hozzáadás" Grid.Row="1"/>
+            <Button x:Name="btn_eygtorles" Content="Kijelölt elem tőrlése" Grid.Row="2"/>
+            <Button x:Name="btn_ossztorles" Content="Összes elem törlése" Grid.Row="3"/>
+            <Label x:Name="lbl_ossztermek" Content="Összes termék: 0" Grid.Row="4"/>
+        </Grid>
     </Grid>
 </Window>
