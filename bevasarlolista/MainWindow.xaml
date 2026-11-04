@@ -23,7 +23,7 @@
             <TextBox x:Name="tbx_ujtermek" Grid.Row="0" FontSize="20"/>
             <Button x:Name="btn_hozzaad" Content="Hozzáadás" Grid.Row="1" Click="btn_hozzaad_Click"/>
             <Button x:Name="btn_eygtorles" Content="Kijelölt elem tőrlése" Grid.Row="2" Click="btn_eygtorles_Click"/>
-            <Button x:Name="btn_ossztorles" Content="Összes elem törlése" Grid.Row="3"/>
+            <Button x:Name="btn_ossztorles" Content="Összes elem törlése" Grid.Row="3" Click="btn_ossztorles_Click"/>
             <Label x:Name="lbl_ossztermek" Content="Összes termék: 0" Grid.Row="4"/>
         </Grid>
     </Grid>
