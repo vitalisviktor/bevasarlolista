@@ -16,9 +16,28 @@ namespace bevasarlolista
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<String> listaelemek = new List<String>();
+
+        
+
         public MainWindow()
         {
             InitializeComponent();
+            lbx_bevasarlolista.ItemsSource = listaelemek;
+        }
+
+        private void btn_hozzaad_Click(object sender, RoutedEventArgs e)
+        {
+            if(tbx_ujtermek.Text != "")
+            {
+                listaelemek.Add(tbx_ujtermek.Text);
+                lbx_bevasarlolista.Items.Refresh();
+                tbx_ujtermek.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Nincs megadva termék","Hiba",MessageBoxButton.OK,MessageBoxImage.Error);
+            }
         }
     }
 }
