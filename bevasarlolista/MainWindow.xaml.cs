@@ -31,9 +31,8 @@ namespace bevasarlolista
             if(tbx_ujtermek.Text != "")
             {
                 listaelemek.Add(tbx_ujtermek.Text);
-                lbx_bevasarlolista.Items.Refresh();
                 tbx_ujtermek.Clear();
-                Szamfrissites();
+                Frissites();
             }
             else
             {
@@ -46,8 +45,7 @@ namespace bevasarlolista
             if (lbx_bevasarlolista.SelectedIndex != -1)
             {
                 listaelemek.RemoveAt(lbx_bevasarlolista.SelectedIndex);
-                lbx_bevasarlolista.Items.Refresh();
-                Szamfrissites();
+                Frissites();
 
             }
             else
@@ -59,12 +57,12 @@ namespace bevasarlolista
         private void btn_ossztorles_Click(object sender, RoutedEventArgs e)
         {
             listaelemek.Clear();
-            lbx_bevasarlolista.Items.Refresh();
-            Szamfrissites();
+            Frissites();
         }
 
-        public void Szamfrissites()
+        public void Frissites()
         {
+            lbx_bevasarlolista.Items.Refresh();
             lbl_ossztermek.Content = "Összes termék: " + listaelemek.Count;
         }
 
