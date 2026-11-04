@@ -20,7 +20,7 @@
                 <RowDefinition Height="90"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <TextBox x:Name="tbx_ujtermek" Grid.Row="0" FontSize="24" TextAlignment="Center"/>
+            <TextBox x:Name="tbx_ujtermek" Grid.Row="0" FontSize="24" TextAlignment="Center" KeyDown="tb_keydown"/>
             <Button x:Name="btn_hozzaad" Content="Hozzáadás" Grid.Row="1" Click="btn_hozzaad_Click"/>
             <Button x:Name="btn_eygtorles" Content="Kijelölt elem tőrlése" Grid.Row="2" Click="btn_eygtorles_Click"/>
             <Button x:Name="btn_ossztorles" Content="Összes elem törlése" Grid.Row="3" Click="btn_ossztorles_Click"/>

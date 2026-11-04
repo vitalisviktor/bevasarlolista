@@ -28,16 +28,8 @@ namespace bevasarlolista
 
         private void btn_hozzaad_Click(object sender, RoutedEventArgs e)
         {
-            if(tbx_ujtermek.Text != "")
-            {
-                listaelemek.Add(tbx_ujtermek.Text);
-                tbx_ujtermek.Clear();
-                Frissites();
-            }
-            else
-            {
-                MessageBox.Show("Nincs megadva termék","Hiba",MessageBoxButton.OK,MessageBoxImage.Error);
-            }
+            Add();
+
         }
 
         private void btn_eygtorles_Click(object sender, RoutedEventArgs e)
@@ -58,6 +50,26 @@ namespace bevasarlolista
         {
             listaelemek.Clear();
             Frissites();
+        }
+        private void tb_keydown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                Add();
+            }
+        }
+        public void Add()
+        {
+            if (tbx_ujtermek.Text != "")
+            {
+                listaelemek.Add(tbx_ujtermek.Text);
+                tbx_ujtermek.Clear();
+                Frissites();
+            }
+            else
+            {
+                MessageBox.Show("Nincs megadva termék", "Hiba", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         public void Frissites()
