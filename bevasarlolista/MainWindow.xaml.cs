@@ -33,6 +33,7 @@ namespace bevasarlolista
                 listaelemek.Add(tbx_ujtermek.Text);
                 lbx_bevasarlolista.Items.Refresh();
                 tbx_ujtermek.Clear();
+                Szamfrissites();
             }
             else
             {
@@ -46,6 +47,7 @@ namespace bevasarlolista
             {
                 listaelemek.RemoveAt(lbx_bevasarlolista.SelectedIndex);
                 lbx_bevasarlolista.Items.Refresh();
+                Szamfrissites();
 
             }
             else
@@ -58,6 +60,13 @@ namespace bevasarlolista
         {
             listaelemek.Clear();
             lbx_bevasarlolista.Items.Refresh();
+            Szamfrissites();
         }
+
+        public void Szamfrissites()
+        {
+            lbl_ossztermek.Content = "Összes termék: " + listaelemek.Count;
+        }
+
     }
 }
